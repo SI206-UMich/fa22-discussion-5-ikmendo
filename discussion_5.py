@@ -38,16 +38,17 @@ class Warehouse:
 
 	# Adds an item to the warehouse	
 	def add_item(self, item):
-		pass
-
+		self.items.append(item)
+	
 	# Returns the item in the warehouse with the most stock		
 	def get_max_stock(self):
-		pass
+		for item in self.items:
+			return max(item.stock)
 	
 	# Returns the item in the warehouse with the highest price
 	def get_max_price(self):
 		pass	
-
+	#loop through items and use max functio to find highest price
 
 
 # Tests
@@ -68,7 +69,7 @@ class TestAllMethods(unittest.TestCase):
 
 	## Check to see whether you can add an item to the warehouse
 	def test_add_item(self):
-		pass
+		self.add_item("Banana", 2, 150)
 
 
 	## Check to see whether warehouse correctly returns the item with the most stock
