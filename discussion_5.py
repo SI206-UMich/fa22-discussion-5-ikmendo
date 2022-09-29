@@ -109,7 +109,7 @@ class TestAllMethods(unittest.TestCase):
 		kroger.add_item(self.item5)
 		max_stock_name = kroger.get_max_stock()
 		self.assertEqual(max_stock_name.name, self.item3.name)  #testing whether function returns Water from list of items
-
+#tests warehouse stocks
 
 	# Check to see whether the warehouse correctly return the item with the highest price
 	def test_warehouse_max_price(self):
