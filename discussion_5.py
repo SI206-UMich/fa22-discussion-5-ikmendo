@@ -113,7 +113,15 @@ class TestAllMethods(unittest.TestCase):
 
 	# Check to see whether the warehouse correctly return the item with the highest price
 	def test_warehouse_max_price(self):
-		pass
+		kroger = Warehouse()
+		kroger.add_item(self.item1)
+		kroger.add_item(self.item2)
+		kroger.add_item(self.item3)
+		kroger.add_item(self.item4)
+		kroger.add_item(self.item5)
+		max_price_name = kroger.get_max_price()
+		self.assertEqual(max_price_name.name, self.item1.name)
+
 		
 
 def main():
